@@ -1,0 +1,392 @@
+body {
+    margin: 0;
+    font-family: "Urbanist", sans-serif;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: white;
+}
+
+/* ======================================Styling================================================ */
+
+.flex {
+    display: flex;
+}
+
+/* ======================================Nav Header================================================ */
+
+.center-nav {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.center-nav a {  
+    color: black;
+    font-family: "Lobster", cursive;
+    font-size: 60px;
+    text-decoration: none;
+}
+
+.center-nav a:hover {
+    color: #44f8ff;
+}
+
+.mobile-bar {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.right-nav {
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+.right-nav a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.right-nav a:hover {
+    color: #44f8ff;
+    text-decoration: underline;
+}
+
+.right-nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+/* ---------------------Img Container---------------------------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;  
+}
+
+.img-container{
+    position: relative;
+}
+
+.img > img {
+    width: 100%;
+}
+
+.img-container > .img-title-header {
+    position: absolute;
+    background-color: rgb(220 220 220 / 50%); /* Create a transparent-like box */
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 10%;
+}
+
+.img-container > .img-title-header > h1 {
+    text-align: center;
+}
+
+/* .img img {
+    width: 20rem;
+} */
+
+/* ---------------------Middle Section---------------------------- */
+
+.middle-section {
+    text-align: center;
+}
+
+.about-me-container {
+    text-align: center;
+}
+
+.about-me-box {
+    /* background-color: black; */
+    width: 400px;
+    height: 300px;
+}
+
+.about-me-box .icon {
+    font-size: 150px;
+}
+
+.about-me-box .icon:hover {
+    color: #44f8ff;
+}
+
+/* ****************************Contact Page**************************** */
+
+.form {
+    margin-left: 0.5rem;
+}
+
+#message {
+    height: 9rem;
+    width: 90%;
+}
+
+/* ****************************Fun Game Page**************************** */
+.game-header {
+    text-align: center;
+}
+
+.game-section-container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+}
+
+.game-container {
+    display: none;
+    text-align: center;
+}
+
+.game-menu {
+    text-align: center;
+}
+
+.start-game {
+    display: block;
+}
+
+#generated_number {
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+}
+
+#start_btn {
+    border-radius: 15px;
+    font-size: 40px;
+    height: 100px;
+    width: 200px;
+}
+
+#submit_btn {
+    margin-top: 25px;
+    border-radius: 15px;
+    font-size: 28px;
+    height: 60px;
+    width: 120px;
+}
+
+#user_input {
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+}
+
+
+/* **************************Responsice Website************************** */
+/* Mobile */
+
+@media (min-width: 300px) and (max-width: 650px) {
+    /* Menu Responsive */
+    .show-menu {
+        animation: showMenu 1s ease-out;
+    }
+
+    .hide-menu {
+        animation: hideMenu .5s ease-out;
+    }
+
+    .mobile-menu-container {
+        background-color: white;;
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .mobile-menu-container .mobile-menu {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 3;
+    }
+
+    .mobile-menu-container .mobile-menu a{
+        color: black;
+        text-decoration: none;
+    }
+
+    .center-nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 0.5rem;
+    }
+
+    #mobile-bar-cta {
+        font-size: 1.5rem;
+    }
+
+    .right-nav {
+        display: none;
+    }
+    
+    .right-nav a {
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .right-nav-list {
+        display: flex;
+        justify-content: space-evenly;
+        width: 60%;
+    }
+
+    /* ---------------------Img Container---------------------------- */
+    .grid-mobile {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .img {
+        text-align: center;
+    }
+
+    .img img {
+        height: 20rem;
+    }
+
+    .img-2, .img-3 {
+        display: none;
+    }
+
+    /* ---------------------Middle Section---------------------------- */
+
+    .about-me-box {
+        /* background-color: black; */
+        width: 100%;
+        height: 10rem;
+    }
+
+    .about-me-box .icon {
+        font-size: 5rem;
+    }
+
+    .about-me-box .icon:hover {
+        color: #44f8ff;
+    }
+
+    .middle-section {
+        margin-bottom: 2rem;
+    }
+
+    /* *********************Fun Game Page****************************** */
+    .game-section-container {
+        height: 15rem;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    .mobile-menu-container {
+        background-color: white;
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .mobile-menu-container .mobile-menu {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 3;
+    }
+
+    .center-nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 0.5rem;
+    }
+
+    #mobile-bar-cta {
+        font-size: 1.5rem;
+    }
+
+    .right-nav {
+        display: none;
+    }
+
+    /* ---------------------Img Container---------------------------- */
+    .grid-mobile {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .img img {
+        width: 20rem;
+    }
+
+    .img-2, .img-3 {
+        display: none;
+    }
+}
+
+/* *********************Animation****************************** */
+
+@keyframes showMenu {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes hideMenu {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
