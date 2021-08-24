@@ -365,6 +365,7 @@ footer p{
     .grid-mobile {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        margin-top: 0.8rem;
     }
 
     .img img {
