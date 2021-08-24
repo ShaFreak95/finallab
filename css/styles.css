@@ -87,6 +87,10 @@ header {
     display: none;
 }
 
+.mobile-menu-container {
+  display: none;
+}
+
 .right-nav {
     align-items: center;
     justify-content: flex-end;
